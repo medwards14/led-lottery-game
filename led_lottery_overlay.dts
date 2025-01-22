@@ -1,0 +1,27 @@
+/dts-v1/;
+/plugin/;
+/ {
+    compatible = "brcm,bcm2712";
+
+    fragment@0 {
+        target-path = "/";
+        __overlay__ {
+            led_lottery_device {
+                compatible = "custom,led-lottery";
+                status = "okay";
+
+                // Define LED GPIOs
+                red-led-gpio = <&gpio 21 0>;
+                blue-led-gpio = <&gpio 27 0>;
+                green-led-gpio = <&gpio 22 0>;
+                yellow-led-gpio = <&gpio 10 0>;
+
+                // Define button and buzzer GPIOs
+                button-gpio = <&gpio 18 0>;
+                buzzer-gpio = <&gpio 23 0>;
+
+                leds = "red-led-gpio", "blue-led-gpio", "green-led-gpio", "yellow-led-gpio";
+            };
+        };
+    };
+};
