@@ -10,13 +10,13 @@
                 compatible = "custom,led-lottery";
                 status = "okay";
 
-                // Define LED GPIOs
+                // defining LED GPIOs
                 red-led-gpio = <&gpio 21 0>;
                 blue-led-gpio = <&gpio 27 0>;
                 green-led-gpio = <&gpio 22 0>;
                 yellow-led-gpio = <&gpio 10 0>;
 
-                // Define button and buzzer GPIOs
+                // defining button and buzzer GPIOs
                 button-gpio = <&gpio 18 0>;
                 buzzer-gpio = <&gpio 23 0>;
 
